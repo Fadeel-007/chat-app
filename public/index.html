@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadelee Chatz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="chat-container">
+        <h1 class="fade-in">Fadelee Chat</h1>
+        <div id="join-section">
+            <input type="text" id="username-input" placeholder="Enter your username...">
+            <button id="join-btn">Join Chat</button>
+        </div>x
+        <div id="chat-section" style="display: none;">
+            <div id="chat-box"></div>
+            <p id="typing-indicator" style="display: none;">Someone is typing...</p>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
