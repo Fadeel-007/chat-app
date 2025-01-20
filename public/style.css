@@ -1,108 +1,95 @@
-/* 🌟 General Styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #deec17;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background: #ffcc00; /* Solid Background (Removed Animation) */
 }
 
-/* 🟡 Chat Container */
-#chat-container {
-    width: 1300px;
-    background: rgb(253, 191, 56);
+/* Chat container */
+.chat-container {
+    width: 400px;
+    background: rgb(235, 231, 18);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔳 Chat Title (No Animation) */
-#chat-container h1 {
+/* Chat title */
+h1 {
     text-align: center;
-    color: #c03535;
-    font-size: 50px;
+    color: maroon;
     margin-bottom: 20px;
 }
 
-/* 🔳 Chat Box (Fixed Header) */
-#chat-box {
-    height: 430px;
-    border: 1px solid #b13f3f;
-    margin-bottom: 10px;
+/* Chat box */
+.chat-box {
+    width: 100%;
+    height: 300px;
     overflow-y: auto;
     padding: 10px;
-    background-color: #ffffff;
+    background: url('chat-bg.jpg') no-repeat center;
+    background-size: cover;
     border-radius: 5px;
     position: relative;
+    border: 1px solid #b13f3f;
+    display: flex;
+    flex-direction: column; /* Ensures messages are stacked properly */
+    gap: 5px; /* Adds spacing between messages */
 }
 
-/* 👤 Typing Indicator */
-#typing-indicator {
-    font-style: italic;
-    color: gray;
-    margin-bottom: 10px;
-}
-
-/* 🎨 Input & Buttons */
-#chat-input {
-    width: calc(100% - 80px);
-    padding: 12px;
-    border: 2px solid #bb4848;
-    border-radius: 25px;
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-#chat-input:focus {
-    border: 2px solid #ff7300;
-    outline: none;
-}
-
-/* 🟠 Send Button */
-#send-btn {
-    width: 70px;
-    padding: 12px;
-    border: none;
-    background-color: #af4f4c;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#send-btn:hover {
-    background-color: #18701c;
-}
-
-/* 💬 Chat Message Bubbles */
-#chat-box p {
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 18px;
+/* Message bubbles */
+.message {
     max-width: 75%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px 0;
     word-wrap: break-word;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px;
 }
 
-/* 🟢 Your Messages */
-.your-message {
-    background-color: #4caf50;
-    color: white;
-    text-align: right;
-    align-self: flex-end;
-    float: left;
-    clear: both;
-}
-     
-/* 🔵 Other Users' Messages */
-.other-message {
-    background-color: #aa3e3e;
-    color: white;
-    text-align: left;
+/* Sender messages (Left side) */
+.sender {
+    background-color: #0779f1;
     align-self: flex-start;
-    float: left;
-    clear: both;
+    text-align: left;
+    border-top-left-radius: 0;
+}
+
+/* Receiver messages (Right side) */
+.receiver {
+    background-color: #6ee910;
+    align-self: flex-end;
+    text-align: right;
+    border-top-right-radius: 0;
+}
+
+/* Input box */
+.input-container {
+    display: flex;
+    padding: 10px;
+    background: #d8d510;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background: #b61c179f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
